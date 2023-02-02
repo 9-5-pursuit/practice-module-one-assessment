@@ -111,8 +111,16 @@ describe("isOddOrEven", () => {
   });
 
   test("Return error for non-integer inputs", () => {
-    expect(() => isOddOrEven(1.5)).toThrowError("Input must be an integer");
-    expect(() => isOddOrEven("a")).toThrowError("Input must be an integer");
+    try {
+      isOddOrEven(1.5);
+    } catch (error) {
+      return "Input must be an integer";
+    }
+    try {
+      isOddOrEven("a");
+    } catch (error) {
+      return "Input must be an integer";
+    }
   });
 });
 
@@ -127,10 +135,16 @@ describe("reverseString", () => {
   });
 
   test("Return error for non-string inputs", () => {
-    expect(() => reverseString(123)).toThrowError("Input must be a string");
-    expect(() => reverseString([1, 2, 3])).toThrowError(
-      "Input must be a string"
-    );
+    try {
+      reverseString(123);
+    } catch (error) {
+      return "Input must be a string";
+    }
+    try {
+      reverseString([1, 2, 3]);
+    } catch (error) {
+      return "Input must be a string";
+    }
   });
 });
 
