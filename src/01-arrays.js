@@ -9,6 +9,8 @@ const sampleArray2 = ["apple", "banana", "orange", "kiwi", "mango"];
  */
 function createArray(size) {
   // code to create array
+  let arr = Array(size).fill(null);
+  return arr;
 }
 
 /**
@@ -19,6 +21,8 @@ function createArray(size) {
  */
 function addElement(arr, element) {
   // code to add element
+  arr.push(element);
+  return arr.length;
 }
 
 /**
@@ -29,6 +33,14 @@ function addElement(arr, element) {
  */
 function removeElement(arr, index) {
   // code to remove element
+  let remove = arr.splice(index);
+
+  if (arr.length === 0) {
+    return "Error: The array is empty.";
+  } else if (arr.length < index);
+  {
+    return "Error: Index out of bounds.";
+  }
 }
 
 /**
@@ -39,6 +51,8 @@ function removeElement(arr, index) {
  */
 function getElement(arr, index) {
   // code to return element
+  let get = arr[index];
+  return get;
 }
 
 /**
@@ -48,6 +62,8 @@ function getElement(arr, index) {
  */
 function getArrayLength(arr) {
   // code to return array length
+  let length = arr.length;
+  return length;
 }
 
 /**
@@ -58,6 +74,8 @@ function getArrayLength(arr) {
  */
 function findElement(arr, element) {
   // code to find element
+  let find = arr.indexOf(element);
+  return find;
 }
 
 /**
@@ -67,6 +85,8 @@ function findElement(arr, element) {
  */
 function reverseArray(arr) {
   // code to reverse array
+  let reverse = arr.reverse();
+  return reverse;
 }
 
 /**
