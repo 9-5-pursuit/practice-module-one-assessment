@@ -9,6 +9,12 @@ const sampleArray2 = ["apple", "banana", "orange", "kiwi", "mango"];
  */
 function createArray(size) {
   // code to create array
+  let myArray = [];
+
+    for (let i = 0; i < size; i++) {
+      myArray.push(null);
+    }
+return myArray 
 }
 
 /**
@@ -19,6 +25,7 @@ function createArray(size) {
  */
 function addElement(arr, element) {
   // code to add element
+  return arr.push(element)
 }
 
 /**
@@ -27,8 +34,18 @@ function addElement(arr, element) {
  * @param {number} index - The index of the element to be removed
  * @returns {boolean} - True if the element was removed successfully, false otherwise
  */
-function removeElement(arr, index) {
+function removeElement(arr, index) { 
   // code to remove element
+  if (arr.length === 0) {
+    return `Error: The array is empty.`
+  }
+if ( arr.length - 1 < index) {
+  return `Error: Index out of bounds.`
+} else {
+ 
+  return arr.splice(index, 1)
+}
+
 }
 
 /**
@@ -38,8 +55,18 @@ function removeElement(arr, index) {
  * @returns {*} - The element at the specified index
  */
 function getElement(arr, index) {
-  // code to return element
+ // index = 2 < 0
+  if (index < 0) {
+    return `Error: Index out of bounds`
+  }
+  if (index > arr.length) {
+    return `Error: Index out of bounds`
+  }
+return arr[index]
 }
+  // code to return element
+
+
 
 /**
  * Returns the number of elements in the given array
@@ -48,7 +75,14 @@ function getElement(arr, index) {
  */
 function getArrayLength(arr) {
   // code to return array length
-}
+  if (arr.length === 0) {
+    return `Error: Input is not an array.`
+  }  
+  
+  return arr.length
+  }
+ 
+
 
 /**
  * Finds the index of the first occurrence of a specified element in the given array
@@ -58,6 +92,14 @@ function getArrayLength(arr) {
  */
 function findElement(arr, element) {
   // code to find element
+  for (let i = 0; i < arr.length; i++) {
+      if (arr.includes(element)) {
+        return arr.indexOf(element)
+      } else {
+        return -1
+      }
+  }
+
 }
 
 /**
@@ -76,6 +118,11 @@ function reverseArray(arr) {
  */
 function sortArray(arr) {
   // code to sort array
+  arr.sort
+  if (arr === "not an array") {
+    return `Error: Input is not an array.`
+  }
+  return arr
 }
 
 /**
