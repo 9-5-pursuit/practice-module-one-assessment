@@ -8,6 +8,9 @@ const sampleArray2 = ["apple", "banana", "orange", "kiwi", "mango"];
  * @returns {array} - The newly created array
  */
 function createArray(size) {
+  let array = size.element;
+  return array
+
   // code to create array
 }
 
@@ -66,6 +69,10 @@ function findElement(arr, element) {
  * @returns {array} - The reversed array
  */
 function reverseArray(arr) {
+  let reversedArray = arr.reverse();
+  return reversedArray;
+  
+
   // code to reverse array
 }
 
@@ -75,6 +82,10 @@ function reverseArray(arr) {
  * @returns {array} - The sorted array
  */
 function sortArray(arr) {
+  let shortArr = [];
+ let array = arr.sort;
+ 
+  
   // code to sort array
 }
 
