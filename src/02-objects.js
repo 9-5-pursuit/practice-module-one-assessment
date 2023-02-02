@@ -17,8 +17,12 @@ let animal = {
  * @returns {object} - The newly created object
  */
 function createObject(objectKey, objectValue) {
+  const obj = new Object(objectKey, objectValue)
+  return obj
+  }
+  
   // code to create object
-}
+
 
 /**
  * Adds a new property to the given object with the specified name and value

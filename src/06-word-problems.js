@@ -6,7 +6,44 @@
  *
  * This function takes in the quantity of items a user is purchasing and returns the final price of the items after the bulk discount has been applied. The bulk discounts are applied based on the quantity of items a user is purchasing. For example, if a user purchases more than 10 items, they receive a 5% discount on each item.
  */
-function calculateBulkPrice() {}
+function calculateBulkPrice(price, quantity) {
+  let discount = 0;
+  let total = 0;
+  let deductedAmt = 0;
+  let reducedAmt = 0;
+  let reducedPrice = 0;
+  console.log(price)
+  if ( 1 <= quantity <= 10){
+    total = quantity * price 
+      return total 
+      
+  }else if (11 >= quantity <= 25 ){
+    discount = .05;
+    reducedAmt = price * discount;
+    
+    reducedPrice = price - reducedAmt;
+    total = reducedAmt * quantity 
+    return total 
+  }else if (26 <= quantity <= 50){
+    discount = .1;
+    reducedAmt = price * discount;
+    reducedPrice = price - reducedAmt;
+    total = reducedAmt * quantity 
+    return total 
+  }else if (quantity > 50){
+    discount = .15;
+    reducedAmt = price * discount;
+    reducedPrice = price - reducedAmt;
+    total = reducedAmt * quantity 
+    return total 
+  }
+    
+  }
+
+
+
+
+
 
 /**
  * @function calculateDiscountedPrice
