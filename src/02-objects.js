@@ -18,7 +18,15 @@ let animal = {
  */
 function createObject(objectKey, objectValue) {
   // code to create object
-}
+  let obj = {}
+  if (objectKey === undefined){
+    return "Error: objectKey must be defined."
+  } else if (objectValue === undefined){
+    return "Error: objectValue must be defined."
+  }
+   obj[objectKey] = objectValue;
+   return obj
+} 
 
 /**
  * Adds a new property to the given object with the specified name and value
@@ -28,6 +36,12 @@ function createObject(objectKey, objectValue) {
  */
 function addProperty(obj, propertyName, propertyValue) {
   // code to add property
+  //return obj[propertyName] = propertyValue
+
+  if (obj){
+    return "Error: first argument must be an object."
+  } else if (obj[propertyName].propertyValue !== typeof "number")
+  
 }
 
 /**
@@ -39,6 +53,7 @@ function addProperty(obj, propertyName, propertyValue) {
  */
 function updateProperty(obj, propertyName, newValue) {
   // code to update property
+  return obj[propertyName] = newValue
 }
 
 /**

@@ -9,6 +9,11 @@ const sampleArray2 = ["apple", "banana", "orange", "kiwi", "mango"];
  */
 function createArray(size) {
   // code to create array
+  let newArray = [];
+  for (let i = 0; i < size; i++){
+    newArray.push(null)
+  }
+  return newArray;
 }
 
 /**
@@ -19,6 +24,7 @@ function createArray(size) {
  */
 function addElement(arr, element) {
   // code to add element
+  return arr.push(element);
 }
 
 /**
@@ -28,8 +34,20 @@ function addElement(arr, element) {
  * @returns {boolean} - True if the element was removed successfully, false otherwise
  */
 function removeElement(arr, index) {
-  // code to remove element
+
+  if (arr.splice(index, 1)){
+    return true
+ } else if (arr === []){
+  return "Error: The array is empty."
 }
+if (index > arr.length){
+  return "Error: Index out of bounds."
+ } 
+  
+} 
+  
+  
+
 
 /**
  * Returns the element at the specified index in the given array
@@ -38,7 +56,17 @@ function removeElement(arr, index) {
  * @returns {*} - The element at the specified index
  */
 function getElement(arr, index) {
+  //let removed = false
   // code to return element
+  if (arr.length (index)){
+    return arr[index]
+  } if (index < 0){
+    return "Error: Index out of bounds"
+   } else if (arr.length < index){
+  return "Error: Index out of bounds"
+  } 
+  
+
 }
 
 /**
@@ -48,6 +76,15 @@ function getElement(arr, index) {
  */
 function getArrayLength(arr) {
   // code to return array length
+  if (arr === falsy){
+    return "Error: Input is not an array."
+  }
+  if (arr.length === []){
+    return 
+  } else {
+    return arr.length
+  }
+  
 }
 
 /**
